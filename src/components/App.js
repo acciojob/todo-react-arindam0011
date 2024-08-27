@@ -24,15 +24,15 @@ const App = () => {
             }
           >Add Todo</button>
         </div>
-        <div id="tasks">
+        <ul id="tasks">
           {
-            tasks.map(task => <div className="task" key={task.id}><p className="taskName">{task.Name}</p><button className="btn"
+            tasks.map(task => <li className="task" key={task.id}><p className="taskName">{task.Name}</p><button className="btn"
             onClick={() => setTasks(tasks.filter((t) => t.id !== task.id))}
             
-            >Delete</button></div>)
+            >Delete</button></li>)
           }
 
-        </div>
+        </ul>
       </div>
     </div>
   )
